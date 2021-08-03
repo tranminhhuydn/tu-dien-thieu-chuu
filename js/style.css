@@ -1,0 +1,105 @@
+ .active { background-color:#3b99ff;}
+ .isonline {background-color:#3b99ff;}
+ .show-online{display:block}
+ .has-sms { font-weight: bold;}
+ /* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+  background-color: rgb(151 200 206);
+}
+body {
+  background-color: rgb(151 200 206);
+  margin-bottom: 0px; /* Margin bottom by footer height */
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* Set the fixed height of the footer here */
+  /*line-height: 60px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+/* login */
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+/*end login*/
+.ng-scope{
+  background-color: rgb(208 235 238 / 59%)
+}
+.container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+  
+  /* height:100px;
+  overflow-y: auto; */
+   background-color: rgb(208 235 238 / 79%)
+ }
+
+.overflowable {
+  height: 240px;
+  overflow-y: auto;
+  /* border: 1px solid #000; */
+}
+.overflowable div{
+  padding: 2px;
+}
+.overflowable-char {
+  overflow-y: auto;
+  max-height: 40px;
+  /* border: 1px solid #000; */
+}
+
+.s-button {
+    margin: 1px;
+    padding: 5px;
+    border: 1px solid #67a0cbc7;
+    line-height: 2.2;
+}
+h1,h4 {display: inline}
+.navbar {
+     min-height: 10px;
+     margin-bottom: 0px;
+     padding: 5px;
+}
+.navbar-brand{
+  height: 0px;
+}
+.tab-pane {
+  min-height: 300px;
+}
+.so-net{
+  background: #FFF;
+}
