@@ -23,6 +23,7 @@ workbox.core.skipWaiting();
 
 workbox.core.clientsClaim();
 
+const listURL = [];
 
 const cacheName='static-shell-v1'
 const resourcesToPrecache=["./index.html","inline-scripts\/analytics.js","inline-scripts\/app-install.js","inline-scripts\/app.js","inline-scripts\/fallback.js","inline-scripts\/fs-helpers.js","inline-scripts\/idb-keyval-iife.js","inline-scripts\/jscd.js","inline-scripts\/keyboard-events.js","inline-scripts\/load-sw.js","inline-scripts\/menu-edit.js","inline-scripts\/menu-file.js","inline-scripts\/menu-recent.js","inline-scripts\/menu-spelling.js","inline-scripts\/menu-tool.js","inline-scripts\/menu-tools-keyboard.js","inline-scripts\/menu-tools-translate.js","inline-scripts\/menu-view.js","inline-scripts\/menus.js","inline-scripts\/personal-db.js","inline-scripts\/rum.js","inline-scripts\/text-area.js","inline-scripts\/ui-db.js","inline-scripts\/ui.js","styles\/main.css","styles\/print.css","styles\/standalone.css","images\/favicon.png","images\/icon-144.png","images\/icon-192.png","images\/icon-256.png","images\/icon-512.png","images\/icon-72.png","images\/icon-96.png","json\/bo.json","json\/boFull.json","json\/gianPhonThe.json","json\/hanNom.json","json\/hanViet.json","css\/font-awesome.min.css","css\/google-icon-editor.css","fonts\/fontawesome-webfont.eot","fonts\/fontawesome-webfont.woff2","fonts\/google-icon-editor.woff2"];
@@ -50,6 +51,10 @@ self.addEventListener('activate', function(e) {
 self.addEventListener('fetch', function(e) {
    e.respondWith(caches.match(e.request)
     .then(cachedResponse=>{
+            // get all link
+      listURL.push(e.request.url)
+      console.clear();
+      console.log(listURL)
       return cachedResponse || fetch(e.request)
     })
   );
